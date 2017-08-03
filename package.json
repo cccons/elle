@@ -7,7 +7,15 @@
   "author": "Cameron V Chaparro <cccons@tuta.io>",
   "license": "GPL-3.0",
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "i:a": "npm i && cd fe && npm i && cd ..",
+    "start": "npm run build && nodemon ./bin/www",
+    "start:pa": "npm run build:pa && nodemon ./bin/www",
+    "build": "cd fe && npm run build && cd ..",
+    "build:pa": "cd fe && npm run build:pa && cd ..",
+    "lint": "cd fe && npm run lint && cd ..",
+    "test": "npm run lint && npm run test:t && npm run test:e",
+    "test:t": "cd fe && npm test && cd ..",
+    "test:e": "cd fe && npm run e2e && cd .."
   },
   "repository": {
     "type": "git",
