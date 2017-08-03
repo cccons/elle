@@ -1,0 +1,40 @@
+{
+  "name": "elle",
+  "version": "0.0.0",
+  "description": "Help ELL teachers give speaking tests to students.",
+  "main": "bin/www",
+  "private": true,
+  "author": "Cameron V Chaparro <cccons@tuta.io>",
+  "license": "GPL-3.0",
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cccons/elle.git"
+  },
+  "keywords": [
+    "elle",
+    "ELL",
+    "teacher",
+    "student",
+    "test",
+    "exam",
+    "quiz"
+  ],
+  "bugs": {
+    "url": "https://github.com/cccons/elle/issues"
+  },
+  "homepage": "https://github.com/cccons/elle#readme",
+  "dependencies": {
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "morgan": "~1.8.1",
+    "serve-favicon": "~2.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
