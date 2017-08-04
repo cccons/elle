@@ -7,7 +7,7 @@ const schema = new mongoose.Schema({
   'email'    : { type: String, required: true, unique: true },
   'username' : { type: String, required: true, unique: true },
   'password' : { type: String, required: true },
-  'exam_res' : [{ type: mongoose.Schema.ObjectId, ref: 'ExamResult' }]
+  'results'  : [{ type: mongoose.Schema.ObjectId, ref: 'ExamResult' }]
 });
 
 schema.plugin(mongooseuv);
