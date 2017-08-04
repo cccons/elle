@@ -3,7 +3,10 @@ const express      = require('express')
     , favicon      = require('serve-favicon')
     , logger       = require('morgan')
     , cookieparser = require('cookie-parser')
-    , bodyparser   = require('body-parser');
+    , bodyparser   = require('body-parser')
+    , mongoose     = require('mongoose');
+
+mongoose.connect('mongodb://localhost/elle', { useMongoClient: true });
 
 const index = require('./routes/index');
 
