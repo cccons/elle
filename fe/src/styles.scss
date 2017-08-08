@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  font: 87.5%/1.4 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
