@@ -14,4 +14,11 @@ export class Page {
     return element(by.css(selector)).getText();
   }
 
+  setWidth(w: number) {
+    browser.manage().window().getSize()
+      .then(size => {
+        browser.manage().window().setSize(w, size.height);
+      });
+  }
+
 }

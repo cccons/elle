@@ -31,3 +31,6 @@ npm-debug.log
 
 # Generated output
 /public
+
+# Merge files
+*.orig

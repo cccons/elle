@@ -1,0 +1,14 @@
+.container {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'content';
+
+  app-header {
+    grid-area: header;
+  }
+
+  .content {
+    grid-area: content;
+  }
+}
