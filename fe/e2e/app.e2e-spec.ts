@@ -14,24 +14,24 @@ describe('Front-end of the elle app', () => {
       .then(done, done.fail);
   });
 
-  it('should only display the title when the screen is < 600px wide', done => {
-    page.setWidth(599);
+  it('should only display the title when the screen is < 700px wide', done => {
+    page.setWidth(699);
     page.getTextFrom('app-header h1')
       .then(t => expect(t).toEqual('elle'))
       .then(done, done.fail);
   });
 
-  it('should display `elle english language learning engine` when the screen is >= 600px wide', done => {
+  it('should display `elle english language learning engine` when the screen is >= 700px wide', done => {
     // media queries are a bit finicky here, so allow some `wiggle room`
-    page.setWidth(610);
+    page.setWidth(710);
     page.getTextFrom('app-header h1')
       .then(t => expect(t).toEqual('elle english language learning engine'))
       .then(done, done.fail);
   });
 
-  it('should display `Exams`, `Classes`, `Students`, and `Profile` in the menu', done => {
+  it('should display `Sign Up`, and `Sign In` in the menu', done => {
     page.getTextFrom('.header-nav')
-      .then(t => expect(t).toEqual('Exams\nClasses\nStudents\nProfile'))
+      .then(t => expect(t).toEqual('Sign up\nSign in'))
       .then(done, done.fail);
   });
 });

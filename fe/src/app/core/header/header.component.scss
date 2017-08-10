@@ -9,13 +9,13 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
     'title title nav';
-  padding: 10px;
+  padding: 0 10px;
 
   .page-title {
     font-size: xx-large;
     font-weight: bold;
     grid-area: title;
-    padding: 28px 0;
+    padding: 10px 0;
 
     .page-subtitle {
       display: none;
@@ -47,14 +47,12 @@
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
 
   .page-header {
     grid-template-areas:
-      'title title title'
-      'nav   nav   nav';
+      'title title title nav nav';
     margin: 0 auto;
-    padding: 30px;
     width: 95%;
 
     @include border-bottom-radius($border-radius * 2);
@@ -64,19 +62,16 @@
     }
 
     .header-nav {
-      grid-template-columns: repeat(4, 1fr);
-      grid-gap: 10px;
-      margin-top: 20px;
+      border-left: 2px solid white;
+      grid-template-columns: repeat(2, 1fr);
 
       .link {
         text-align: center;
-        padding: 10px;
+        padding: 20px;
 
         &:hover {
           background-color: white;
           color: $default;
-
-          @include border-radius($border-radius);
         }
       }
     }
