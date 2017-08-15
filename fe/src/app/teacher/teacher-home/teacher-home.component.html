@@ -1,0 +1,31 @@
+<section class="container">
+  <h2 class="title">Welcome to your Teacher Portal!</h2>
+  <nav class="navbar">
+    <a>Classes</a>
+    <a>Exams</a>
+    <a>Profile</a>
+  </nav>
+  <div class="content">
+    <a class="box add-class" (click)="addClass()">
+      <span class="fa-stack fa-lg icons">
+        <i class="fa fa-circle-thin fa-stack-2x"></i>
+        <i class="fa fa-plus fa-stack-1x"></i>
+      </span>
+      <span>Add Class</span>
+    </a>
+    <a class="box add-exam" (click)="addExam()">
+      <span class="fa-stack fa-lg icons">
+        <i class="fa fa-circle-thin fa-stack-2x"></i>
+        <i class="fa fa-plus fa-stack-1x"></i>
+      </span>
+      <span>Add Exam</span>
+    </a>
+    <a class="box edit-profile" (click)="editProfile()">
+      <span class="fa-stack fa-lg icons">
+        <i class="fa fa-square-o fa-stack-2x"></i>
+        <i class="fa fa-pencil fa-stack-1x"></i>
+      </span>
+      <span>Edit Profile</span>
+    </a>
+  </div>
+</section>

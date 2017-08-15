@@ -1,0 +1,119 @@
+@import 'colors';
+@import 'constants';
+@import 'mixins/border';
+
+.container {
+  display: grid;
+  grid-template-areas:
+    'title'
+    'nav'
+    'content';
+  margin: 0 auto;
+  padding: 10px 0;
+  width: 95%;
+
+  .title {
+    grid-area: title;
+
+    &::after {
+      border: 2px solid $default;
+      content: ' ';
+      display: block;
+
+      @include border-radius($border-radius);
+    }
+  }
+
+  .navbar {
+    display: flex;
+    grid-area: nav;
+    padding: 10px 0;
+    text-align: center;
+    flex-direction: column;
+
+    a {
+      margin: 5px auto;
+      padding: 5px;
+      width: 99%;
+
+      &:hover {
+        background-color: $default;
+        color: white;
+        font-style: italic;
+        text-decoration: underline;
+
+        @include border-radius($border-radius);
+      }
+    }
+  }
+
+  .content {
+    display: grid;
+    grid-area: content;
+    grid-template-areas:
+      'add-class'
+      'add-exam'
+      'edit-profile';
+
+    .box {
+      background-color: $default;
+      color: white;
+      margin: 5px auto;
+      padding: 50px;
+      width: 99%;
+
+      @include border-radius($border-radius * 2);
+
+      .icons {
+        display: block;
+        margin: 0 auto;
+      }
+
+      &, span:last-child {
+        text-align: center;
+      }
+    }
+
+    .add-class {
+      grid-area: add-class;
+    }
+
+    .add-exam {
+      grid-area: add-exam;
+    }
+
+    .edit-profile {
+      grid-area: edit-profile;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  .container {
+    grid-template-areas:
+      'title   title   title'
+      'nav     nav     nav'
+      'content content content';
+    grid-template-columns: repeat(3, 1fr);
+
+    .navbar {
+      flex-direction: row;
+
+      a {
+        margin: 5px;
+      }
+    }
+
+    .content {
+      grid-template-areas:
+        'add-class    add-exam'
+        'edit-profile edit-profile';
+
+      .edit-profile {
+        margin: 5px auto;
+      }
+    }
+  }
+
+}
