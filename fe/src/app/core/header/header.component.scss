@@ -62,12 +62,15 @@
     }
 
     .header-nav {
-      border-left: 2px solid white;
       grid-template-columns: repeat(2, 1fr);
 
       .link {
+        border-bottom: 2px solid $default;
+        border-top: 2px solid $default;
         text-align: center;
         padding: 20px;
+
+        @include border-radius($border-radius);
 
         &:hover {
           background-color: white;
